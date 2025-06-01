@@ -68,13 +68,15 @@
 
 
 .heading {
-  font-weight: 300;
+  font-weight: 320;
   font-size: 1.8rem;
   line-height: 1.5;
   position: relative;
   text-align: left;
   margin: 10px 0;
   padding-bottom: 5px;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .heading::after {
@@ -92,7 +94,7 @@
 .signin-text {
   margin: 10px 0;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 300;
 }
 
@@ -110,7 +112,7 @@
 }
 
 .sign-in-button:hover {
-  background-color: #ff7834;
+  background-color: #ecc17b;
 }
 
 

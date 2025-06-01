@@ -1,10 +1,13 @@
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./VerifyCode.css";
 import logo from "../assets/verify.png"; 
 
 const VerifyCode = () => {
   const [code, setCode] = useState(["", "", "", "", "", ""]);
+  const navigate = useNavigate();
 
   const handleInputChange = (value, index) => {
     const newCode = [...code];
@@ -28,6 +31,10 @@ const VerifyCode = () => {
 
   const handleResendCode = () => {
     alert("Resend Code clicked");
+  };
+
+  const handleGoBack = () => {
+    navigate("/forgot-password");
   };
 
   return (
@@ -59,6 +66,9 @@ const VerifyCode = () => {
         </button>
         <button onClick={handleResendCode} className="resend-link">
           Resend Code
+        </button>
+          <button onClick={handleGoBack} className="back-button">
+          ← Back
         </button>
       </div>
     </div>

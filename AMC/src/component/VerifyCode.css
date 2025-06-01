@@ -29,6 +29,7 @@
 }
 
 
+
 .verify-code-heading {
     font-size: 24px; 
     color: #9b6bfc; 
@@ -43,7 +44,23 @@
     margin-bottom: 20px; 
 }
 
-
+.bottom-back-button {
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #555;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .bottom-back-button:hover {
+    background-color: #eee;
+    color: #333;
+  }
+  
 .code-inputs {
     display: flex; 
     justify-content:center; 

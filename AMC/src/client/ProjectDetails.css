@@ -1,31 +1,212 @@
-.project-details {
+
+/* 
+  .project-details-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
     padding: 20px;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 400px;
   }
   
-  .back-button {
-    display: inline-block;
+  .project-details-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #070408;
     margin-bottom: 20px;
+  }
+  
+  .project-details-container p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  .project-details-container strong {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    font-size: 18px;
     margin-top: 20px;
-    padding: 10px 15px;
-    background-color: #eb9a2f;
+  }
+  
+  button {
+    background-color: #652a89;
     color: #fff;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .back-button:hover {
-    background-color: #d77b2a;
-  }
-  
-  .tab-content {
+    font-size: 16px;
     margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    transition: background-color 0.3s;
   }
   
+  button:hover {
+    background-color: #de8f46;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .project-details-container p strong {
+    color: #333;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .project-details-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .project-details-container h2 {
+      font-size: 24px;
+    }
+  
+    .project-details-container p {
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  } */
+
+  .project-details-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 400px;
+  }
+  
+  .project-details-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #070408;
+    margin-bottom: 20px;
+  }
+  
+  .project-details-container p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  .project-details-container strong {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  
+  /* .button-container {
+    text-align: center; 
+    margin-top: 20px;
+  } */
+  .button-container {
+    text-align: center; /* Center both buttons */
+    margin-top: 20px;
+    display: flex; /* Use flexbox for better control over button alignment */
+    justify-content: center; /* Center align the buttons horizontally */
+    gap: 20px; /* Add a consistent gap between the buttons */
+  }
+  
+  .view-invoice-btn,
+  .back-btn {
+    background-color: #652a89;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 150px; /* Ensure both buttons have the same width */
+  }
+  
+  .view-invoice-btn:hover,
+  .back-btn:hover {
+    background-color: #de8f46;
+  }
+  
+  .view-invoice-btn:focus,
+  .back-btn:focus {
+    outline: none;
+  }
+  
+  
+  .view-invoice-btn,
+  .back-btn {
+    background-color: #652a89;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Add spacing between the buttons */
+    transition: background-color 0.3s;
+    width:150px;
+  }
+  
+  .view-invoice-btn:hover,
+  .back-btn:hover {
+    background-color: #de8f46;
+  }
+  
+  .view-invoice-btn:focus,
+  .back-btn:focus {
+    outline: none;
+  }
+  
+  
+  
+  .project-details-container p strong {
+    color: #333;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .project-details-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .project-details-container h2 {
+      font-size: 24px;
+    }
+  
+    .project-details-container p {
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  
+    .back-link {
+      font-size: 14px;
+    }
+  }

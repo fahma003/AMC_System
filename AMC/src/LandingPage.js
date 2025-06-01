@@ -29,7 +29,7 @@ const LandingPage = () => {
           <h2 className="heading">
             Dedicated maintenance for contract clients. You're in trusted hands.
           </h2>
-          <p className="signin-text">Sign in to your account</p>
+          <p className="signin-text">Sign in to your account!</p>
           <button className="sign-in-button" onClick={handleSignIn}>
             Sign in
           </button>

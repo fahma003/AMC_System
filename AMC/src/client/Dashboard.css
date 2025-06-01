@@ -1,4 +1,4 @@
-.dashboard {
+   .dashboard {
     display: flex;
     margin: 20px;
     border: 1px solid #ccc;
@@ -15,4 +15,90 @@
     flex: 2;
     background-color: #fff;
   }
+
+  .back-button-login {
+    text-align: left;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+    margin-bottom: 20px;
+  }
+
+
+.logout-icon1-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  /* background-color: #fff; */
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.logout-icon1-container:hover {
   
+  color: rgb(210, 154, 12);
+  transform: scale(1.2);
+}
+
+.logout-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px 30px; /* Increased padding for better spacing */
+  z-index: 1000;
+  text-align: center;
+  width: 320px; /* Slightly increased width */
+}
+
+.logout-popup p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 15px; /* Add spacing between buttons */
+}
+
+.confirm-button,
+.cancel-button {
+  padding: 5px 20px; /* Increased padding for better clickability */
+  border: none;
+  border-radius: 5px; /* Rounded corners for a modern look */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold; /* Bold text for emphasis */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.confirm-button {
+  background-color: #b778fa;
+  color: #fff;
+}
+
+.confirm-button:hover {
+  background-color: #822828; /* More pronounced hover effect */
+  transform: scale(1.05); /* Smooth scaling */
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: #333;
+}
+
+.cancel-button:hover {
+  background-color: #b3b3b3; /* Slightly darker hover effect */
+  transform: scale(1.05); /* Smooth scaling */
+}
+

@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import './Login.css';
-import { FaEnvelope, FaLock } from 'react-icons/fa';
+import { FaEnvelope, FaLock, FaArrowLeft } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import welcomeImage from '../assets/loginimage.png';
@@ -10,6 +11,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [showErrorPopup, setShowErrorPopup] = useState(false);
 
   const handleSignIn = async (event) => {
     event.preventDefault();
@@ -18,23 +20,41 @@ const Login = () => {
         email,
         password,
       });
+
       if (response.status === 200) {
-        const role = response.data.role; // Assuming role is returned from the backend
+        //const role = response.data.role; 
+        const rawRole = response.data.role;
+        const role = rawRole.trim().toUpperCase(); // normalize to lowercase
+        localStorage.setItem('email', email);
+        localStorage.setItem('role', role); 
+
         if (role === 'CLIENT') {
-          navigate('/client-dashboard'); // Navigate to Client Dashboard
+          navigate('/Dashboard'); 
         } else if (['ADMIN', 'AMC COORDINATOR', 'ACCOUNTANT'].includes(role)) {
-          navigate('/home'); // Navigate to shared dashboard
+          navigate('/home'); 
         }
       }
     } catch (err) {
-      setError('Invalid email or password');
+      setShowErrorPopup(true);
     }
+  };
+
+  const closePopup = () => {
+    setShowErrorPopup(false); 
+  };
+
+  const handleBackButtonClick = () => {
+    navigate('/'); 
   };
 
   return (
     <div className="login-container">
       <div className="login-box">
         <div className="login-left">
+          
+           <a href="/" className="login-back-link">
+          &larr; 
+        </a>
           <h2>Welcome Back!</h2>
           <img src={welcomeImage} alt="Welcome" className="welcome-image" />
         </div>
@@ -70,6 +90,14 @@ const Login = () => {
             </div>
             <button type="submit">Sign In</button>
           </form>
+          {showErrorPopup && (
+            <div className="popup-overlay">
+              <div className="popup-content">
+                <p>Invalid email or password!</p>
+                <button onClick={closePopup}>OK</button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -77,5 +105,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
