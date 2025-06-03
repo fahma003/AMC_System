@@ -22,9 +22,10 @@ const Login = () => {
       });
 
       if (response.status === 200) {
-        //const role = response.data.role; 
+         
+        
         const rawRole = response.data.role;
-        const role = rawRole.trim().toUpperCase(); // normalize to lowercase
+        const role = rawRole.trim().toUpperCase(); 
         localStorage.setItem('email', email);
         localStorage.setItem('role', role); 
 
@@ -86,7 +87,7 @@ const Login = () => {
             </div>
             {error && <p className="error-message">{error}</p>}
             <div className="forgot-password">
-              <Link to="/forgot-password">Forgot Password?</Link>
+              {/* <Link to="/forgot-password">Forgot Password?</Link> */}
             </div>
             <button type="submit">Sign In</button>
           </form>
